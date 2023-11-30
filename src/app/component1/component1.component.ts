@@ -16,8 +16,7 @@ export class Component1Component implements OnInit{
   divServei:any
   constructor(private s: ServeiComp1i2Service) {
     this.dom1 = document.URL
-    this.divServei = document.getElementById('divServei');
-    this.divServei.innerHTML = "Hola, bones aquest es el text de dins del DIV del component1";
+
   }
   ngOnInit() {
     let idTitol = document.getElementById('titol')!;
@@ -26,5 +25,9 @@ export class Component1Component implements OnInit{
     changeSize();
     countWords('contarParagraf', 'numParaules');
     addImage();
+
+    this.divServei = document.getElementById('divServei');
+    this.divServei.innerHTML = "Hola, bones aquest es el text de dins del DIV del component1";
+    this.s.num = this.divServei.innerHTML;
   }
 }
