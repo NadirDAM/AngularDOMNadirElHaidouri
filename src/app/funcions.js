@@ -27,3 +27,25 @@ export function addImage() {
   imatge.src = "../../assets/imatge.jpg"
   imatge = imatge.style.width = 100+"px"
 }
+export function mostrarValorsLlistaDesplegable() {
+  // Obtenim la llista desplegable pel seu ID
+  let dropdownList = document.getElementById('dropdownListDavid');
+
+  // Obtenim el div on volem mostrar els valors
+  let resultsDiv = document.getElementById('resultsDiv');
+
+  // Verifiquem que la llista desplegable i el div existeixin
+  if (dropdownList && resultsDiv) {
+    // Obtenim tots els elements de la llista desplegable
+    let valors = [];
+    for (let i = 0; i < dropdownList.options.length; i++) {
+      valors.push(dropdownList.options[i].value);
+    }
+
+    // Mostrem els valors en el div
+    resultsDiv.innerHTML = 'Valors de la llista desplegable: ' + valors.join(', ');
+  } else {
+    console.error('No es troba la llista desplegable o el div.');
+  }
+
+}

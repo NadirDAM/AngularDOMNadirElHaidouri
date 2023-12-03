@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ServeiComp1i2Service} from "../servei-comp-1i2.service";
 // @ts-ignore
-import {countWords, changeSize, yellowSubmarine, addImage} from '../funcions.js';
+import {countWords, changeSize, yellowSubmarine, addImage, mostrarValorsLlistaDesplegable} from '../funcions.js';
 
 @Component({
   selector: 'app-component1',
@@ -25,6 +25,7 @@ export class Component1Component implements OnInit{
     changeSize();
     countWords('contarParagraf', 'numParaules');
     addImage();
+    mostrarValorsLlistaDesplegable();
 
     this.divServei = document.getElementById('divServei');
     this.divServei.innerHTML = "Hola, bones aquest es el text de dins del DIV del component1";
